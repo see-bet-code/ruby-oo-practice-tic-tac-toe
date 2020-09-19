@@ -63,7 +63,7 @@ class TicTacToe
             o_win = combo.all? do |ind|
                 @board[ind] == "O"
             end
-            return combo if x_win || o_win
+            x_win || o_win
         end
     end
 
