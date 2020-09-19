@@ -49,9 +49,11 @@ class TicTacToe
     end
 
     def turn
+        player = self.current_player
+        print "It's #{player}'s turn. Please enter a valid move."
         input = gets.chomp
         ind = self.input_to_index(input)
-        self.valid_move?(ind) ? self.move(ind, self.current_player) : self.turn 
+        self.valid_move?(ind) ? self.move(ind, player) : self.turn 
         self.display_board
     end
 
